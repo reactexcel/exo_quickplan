@@ -1,0 +1,55 @@
+/*
+* Load Spinner
+*/
+$load-spinner--speed: 2s;
+.load-spinner {
+  position: absolute;
+  top: $navbar-top--height;
+  left: 0; right: 0;
+  height: 100%;
+  background: rgba(#fff, 0.7);
+  z-index: 999;
+
+  > div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 6px;
+    background-color: #009688;
+  }
+}
+
+// spinner animation
+.bar1,
+.bar2,
+.bar3,
+.bar4 {
+  display: inline;
+  position: absolute;
+  width: 0;
+  height: 100%;
+  left: 50%;
+  text-align: center;
+}
+.bar1 {
+  background-color: #da4733;
+  animation: loading $load-spinner--speed linear infinite;
+}
+.bar2 {
+  background-color: #3b78e7;
+  animation: loading $load-spinner--speed linear ($load-spinner--speed / 4) infinite;
+}
+.bar3 {
+  background-color: #fdba2c;
+  animation: loading $load-spinner--speed linear (2 * $load-spinner--speed / 4) infinite;
+}
+.bar4 {
+  background-color: #009688;
+  animation: loading $load-spinner--speed linear (3 * $load-spinner--speed / 4) infinite;
+}
+@keyframes loading {
+    from {left: 50%; width: 0; z-index:100;}
+    33.3333% {left: 0; width: 100%; z-index: 10;}
+    to {left: 0; width: 100%;}
+}

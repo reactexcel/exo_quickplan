@@ -1,0 +1,29 @@
+.active {
+  background-color: #E4E4E4;
+}
+
+.col {
+  padding-bottom: 0px !important;
+}
+.select{
+  // span:nth-child(1){
+  //     span:nth-child(1){
+  //       background:#fafafa;
+  //     }
+  // }
+   div:nth-child(1) {
+   input{
+     border-bottom : 1px solid black;
+   }
+   input:not(:hover){
+     border-bottom : 2.5px solid #6abda0;
+   }
+ }
+}
+
+.actionMenu {
+  color:black;
+}
+.actionMenu:hover {
+  color:#7fc7ae;
+}

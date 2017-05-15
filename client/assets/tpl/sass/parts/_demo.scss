@@ -1,0 +1,172 @@
+/*
+ * Demo Bar [Not used on production]
+ */
+.navbar-top .demo-toggle {
+  > i {
+    animation: fa-spin 6s infinite linear;
+  }
+}
+
+.demo-bar {
+  position: fixed;
+  background: #fff;
+  padding: $contentPadding;
+  top: -270px;
+  right: 222px;
+  width: 500px;
+  // width: 100px;
+  transition: top 300ms ease;
+  z-index: 1000;
+
+  @media #{$medium-and-down} {
+    right: 0;
+    width: 100%;
+  }
+
+  &.show {
+    top: $navbar-top--height;
+  }
+
+  .demo-cont-Theme {
+    [name=Theme-Color] + label {
+      font-size: 0;
+      padding-left: 0;
+      margin: 7px;
+      width: 35px;
+      height: 35px;
+      border-radius: 3px;
+
+      &:after, &:before {
+        display: none;
+      }
+    }
+
+    #demo-Theme-Color-blue + label {
+      background: color('blue');
+    }
+    #demo-Theme-Color-amber + label {
+      background: color('amber');
+    }
+    #demo-Theme-Color-brown + label {
+      background: color('brown');
+    }
+    #demo-Theme-Color-cyan + label {
+      background: color('cyan');
+    }
+    #demo-Theme-Color-deepOrange + label {
+      background: color('deep-orange');
+    }
+    #demo-Theme-Color-deepPurple + label {
+      background: color('deep-purple');
+    }
+    #demo-Theme-Color-green + label {
+      background: color('green');
+    }
+    #demo-Theme-Color-indigo + label {
+      background: color('indigo');
+    }
+    #demo-Theme-Color-lightBlue + label {
+      background: color('light-blue');
+    }
+    #demo-Theme-Color-lightGreen + label {
+      background: color('light-green');
+    }
+    #demo-Theme-Color-lime + label {
+      background: color('lime');
+    }
+    #demo-Theme-Color-orange + label {
+      background: color('orange');
+    }
+    #demo-Theme-Color-pink + label {
+      background: color('pink');
+    }
+    #demo-Theme-Color-purple + label {
+      background: color('purple');
+    }
+    #demo-Theme-Color-red + label {
+      background: color('red');
+    }
+    #demo-Theme-Color-teal + label {
+      background: color('teal');
+    }
+    #demo-Theme-Color-yellow + label {
+      background: color('yellow');
+    }
+    #demo-Theme-Color-blueGrey + label {
+      background: color('blue-grey');
+    }
+  }
+
+  .demo-radio-0, .demo-radio-1,
+  .demo-radio-2, .demo-radio-3 {
+    display: none;
+
+    + label {
+      padding-left: 0;
+      font-size: 1.3rem;
+      float: right;
+
+      &:after, &:before {
+        display: none;
+      }
+    }
+
+    &:checked + label {
+      color: inherit;
+      text-decoration: underline;
+    }
+  }
+
+  .demo-cont-0, .demo-cont-1,
+  .demo-cont-2, .demo-cont-3 {
+    display: none;
+    padding: 10px 0;
+    clear: both;
+  }
+
+  .demo-radio-0:checked ~ .demo-cont-0,
+  .demo-radio-1:checked ~ .demo-cont-1,
+  .demo-radio-2:checked ~ .demo-cont-2,
+  .demo-radio-3:checked ~ .demo-cont-3 {
+    display: block;
+  }
+}
+
+// hide on small screens
+@media screen and (max-width: 450px) {
+  .navbar-top .demo-toggle,
+  .demo-bar {
+    display: none;
+  }
+}
+
+/* RTL Demo Bar */
+html.rtl {
+  .demo-bar {
+    left: 222px;
+    right: auto;
+
+
+    .demo-cont-Theme [name=Theme-Color] + label {
+      margin-left: 7px;
+      padding-right: 0;
+      padding-left: 0;
+      margin-right: 7px;
+    }
+  }
+
+
+  .demo-radio-0, .demo-radio-1,
+  .demo-radio-2, .demo-radio-3 {
+    + label {
+      float: left;
+      margin-right: 0;
+      margin-left: 20px;
+      padding-right: 0 !important;
+    }
+  }
+
+  #demo-local-clear {
+    float: left !important;
+  }
+}

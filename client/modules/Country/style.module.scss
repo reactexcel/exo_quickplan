@@ -1,0 +1,20 @@
+.linkDisabled {
+  pointer-events:none;
+  cursor:default;
+}
+.test{
+  color:black;
+}
+.test:hover{
+  color:#7fc7ae;
+}
+.select{
+   div:nth-child(1) {
+   input{
+     border-bottom : 1px solid black;
+   }
+   input:not(:hover){
+     border-bottom : 2.5px solid #6abda0;
+   }
+ }
+}

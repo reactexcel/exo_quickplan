@@ -1,0 +1,19 @@
+/*
+* Footer
+*/
+footer {
+  position: relative;
+  padding: $contentPadding;
+  border-top: 1px solid #DEE1EC;
+  background: #fff;
+  height: 70px;
+}
+.sidebar-small footer {
+  left: $sidebar--small;
+}
+
+
+// sparkline fix
+.jqstooltip {
+  box-sizing: content-box;
+}

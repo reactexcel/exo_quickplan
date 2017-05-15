@@ -1,0 +1,14 @@
+.country-city-selectbox {
+  position: relative;
+  font-size: 16px;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 300px;
+  max-width: 100%;
+  margin: 0;
+  padding: 20px 0;
+
+  select {
+    width: 100%;
+  }
+}

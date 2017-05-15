@@ -1,0 +1,100 @@
+.select{
+  input{
+    height:1.5rem;
+  }
+  padding-top: 2px;
+  font-weight: bold;
+   div:nth-child(1) {
+     span{
+     top:2px;
+   }
+   input{
+     height: 1.5rem;
+   }
+ }
+}
+.configHead{
+  span{
+    font-size: 10px;
+    color:#bfbfbf;
+  }
+}
+.accommodationTabs {
+  background-color: white;
+
+  p {
+    margin: 0;
+    padding: 0 10px;
+    font-size: 1.2em;
+  }
+
+  .collectionItem {
+    background-color: #F2F2F2;
+    position: relative;
+  }
+}
+
+.timeslot {
+  display: inline-block;
+  padding: 10px;
+  font-size: 1.1em;
+}
+
+.roomTitle {
+  display: inline-block;
+}
+
+.changeDate {
+  float: right;
+  display: inline-block;
+  padding: 5px 20px;
+  font-size: 10px;
+  font-weight: 600;
+  i{
+    font-size: 14px;
+  }
+}
+
+.floatRight {
+  float: right;
+  vertical-align: middle;
+  display: inline-block;
+  font-size: 1.2em;
+
+  span {
+    padding-top: 5px;
+    padding-right: 20px;
+  }
+
+  i {
+    font-size: 1.5em;
+    margin-right: 5px;
+  }
+}
+
+.textRight {
+  text-align: right;
+  vertical-align: middle;
+  color:#bfbfbf;
+}
+
+.roomConfigWrapper {
+  // border: 1px solid #eee;
+  // margin: 10px 0;
+}
+
+.disabled {
+   pointer-events: none;
+   cursor: default;
+   color: #CCCCCC;
+ }
+
+.transferIcon {
+  display:inline-block;
+  float:left;
+  font-size: 1.2em;
+}
+.routes{
+  font-size: 10px;
+  color:#b1b1b1;
+}

@@ -1,0 +1,4 @@
+{
+  "plugins": ["transform-runtime", "./server/utils/babelRelayPlugin"],
+  "presets": ["react", "es2015", "stage-0"]
+}

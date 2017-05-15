@@ -1,0 +1,121 @@
+
+/*
+ * layouts
+ */
+.layout {
+  $layout-h: 220px;
+  $layout-left-w: 100px;
+  $layout-top-h: 40px;
+  $layout-side: #CFCFCF;
+  $layout-static: #7E7E7E;
+
+  &-top-fixed,
+  &-top-static,
+  &-top-static-left-small,
+  &-left-small,
+
+  &-top-under,
+  &-top-under-left-small,
+  &-top-under-static,
+  &-top-under-static-left-small {
+    position: relative;
+    height: $layout-h;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 5px;
+    padding-top: $layout-top-h + 5px;
+    padding-left: $layout-left-w + 5px;
+
+    .layout-side {
+      position: absolute;
+      background: $layout-side;
+      width: $layout-left-w;
+      height: 100%;
+      left: 0;
+      top: 0;
+    }
+    .layout-top {
+      position: absolute;
+      background: #fff;
+      top: 0;
+      left: 0;
+      height: $layout-top-h;
+      width: 100%;
+
+      @include shadow(1);
+    }
+
+    &.active {
+      box-shadow: 0 0 0 3px $secondary-color;
+    }
+
+    pre {
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      opacity: 0;
+      transition: opacity 300ms ease;
+    }
+
+    &.active pre,
+    &:hover pre {
+      opacity: 1;
+    }
+  }
+
+  &-top-fixed {
+  }
+  &-left-small {
+    .layout-side {
+      width: $layout-top-h;
+    }
+    padding-left: $layout-top-h + 5px;
+  }
+  &-top-static {
+    .layout-top {
+      border: 1px dashed $layout-static;
+    }
+  }
+  &-top-static-left-small {
+    .layout-side {
+      width: $layout-top-h;
+    }
+    .layout-top {
+      border: 1px dashed $layout-static;
+    }
+    padding-left: $layout-top-h + 5px;
+  }
+
+
+  &-top-under,
+  &-top-under-left-small,
+  &-top-under-static,
+  &-top-under-static-left-small {
+    .layout-top {
+      z-index: 0;
+    }
+    .layout-side {
+      z-index: 1;
+    }
+  }
+  &-top-under-left-small {
+    .layout-side {
+      width: $layout-top-h;
+    }
+    padding-left: $layout-top-h + 5px;
+  }
+  &-top-under-static {
+    .layout-top {
+      border: 1px dashed $layout-static;
+    }
+  }
+  &-top-under-static-left-small {
+    .layout-side {
+      width: $layout-top-h;
+    }
+    .layout-top {
+      border: 1px dashed $layout-static;
+    }
+    padding-left: $layout-top-h + 5px;
+  }
+}

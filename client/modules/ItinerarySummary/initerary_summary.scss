@@ -1,0 +1,66 @@
+.page {
+  .row {
+    margin: 0
+  }
+
+  hr {
+    margin: 0
+  }
+  .container-header {
+    position: relative;
+
+
+    .collapse-container {
+      position: absolute;
+      right: 1.75rem;
+    }
+
+    // border-bottom: 2px solid #EEEEE9;
+  }
+
+  .bold {
+    font-weight: bold;
+  }
+
+  .line {
+    padding-left: 50px;
+  }
+
+  .relative {
+    position: relative;
+  }
+
+  .absolute {
+    position: absolute;
+
+    &.l-50 {
+      left: 50px;
+    }
+  }
+
+  .inline-block {
+    display: inline-block;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+
+  .row {
+    h1.col {
+      font-weight: bold;
+      font-size: 24px;
+      padding-left: 35px;
+      line-height: 24px;
+      margin: 0;
+    }
+
+
+    .service-icon {
+      margin-right: 25px;
+      vertical-align: top;
+    }
+  }
+}

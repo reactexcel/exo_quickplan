@@ -1,0 +1,103 @@
+
+/* Mailbox */
+.mail-inbox .card-panel > .row {
+  margin: 0;
+}
+.mail-compose-btn {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+}
+.mail-search {
+  margin-top: 0;
+  input {
+    margin: 0;
+  }
+}
+.mail-search .btn {
+  position: absolute;
+  top: 1px;
+  right: 0;
+}
+
+/* Mail Sidebar */
+.mail-sidebar {
+  margin: 0;
+
+  li > a {
+    display: block;
+    padding: 10px 15px;;
+    color: inherit;
+
+    i {
+      font-size: 1.1em;
+      margin-right: 5px;
+      vertical-align: middle;
+      width: 1.2rem;
+      display: inline-block;
+    }
+  }
+  li.active > a,
+  li:hover > a {
+    background: rgba(0,0,0,0.04);
+  }
+  li.active > a {
+    color: $secondary-color;
+  }
+
+  hr {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+/* Mail Inbox */
+.mail-inbox {
+  padding-right: 1rem;
+
+  table > tbody > tr {
+    &.unread {
+      font-weight: bold;
+    }
+    &.read {
+      background: color('grey', 'lighten-4');
+    }
+
+    a {
+      color: inherit;
+    }
+
+    > th, > td {
+      padding: 10px;
+    }
+
+    .mail-check {
+      label {
+        padding-left: 20px;
+        margin-right: 0;
+        height: 17px;
+        line-height: 17px;
+      }
+    }
+
+    .mail-contact {
+      width: 25%;
+    }
+    .mail-subject {
+      width: 75%;
+    }
+    .mail-date {
+      text-align: right;
+    }
+    .mail-date {
+      white-space: nowrap;
+    }
+  }
+}
+
+/* Mail Compose */
+.mail-compose {
+  .cke {
+    margin-bottom: 1rem;
+  }
+}

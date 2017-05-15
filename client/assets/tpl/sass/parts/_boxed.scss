@@ -1,0 +1,83 @@
+/*
+* Boxed
+*/
+html {
+    background-color: #E9EBEC;
+}
+body.boxed {
+  border-left: 1px solid #DEE1EC;
+  border-right: 1px solid #DEE1EC;
+
+  &,
+  .navbar-top .nav-wrapper {
+    max-width: 768px;
+    margin: 0 auto;
+
+    @media only screen and (min-width : $medium-screen-up) {
+      max-width: $medium-screen;
+    }
+    @media only screen and (min-width : $large-screen-up) {
+      max-width: $large-screen;
+    }
+  }
+
+  .yaybar,
+  &.yay-hide .yaybar.yay-hide-to-small {
+    left: auto;
+  }
+  
+  // translate yaybar content instead of all navbar
+  .yaybar {
+    background: none;
+    border: none;
+    transition: none;
+    clip: rect(0 $sidebar--width 9999px 0);
+    clip: rect(0, $sidebar--width, 9999px, 0);
+    
+    > div {
+      background: $yay--bgcolor;
+      border-right: 1px solid #DEE1EC;
+      transition: transform $yay--transition, width $yay--transition;
+    }
+
+    &.yay-light > div {
+      background: $yay--l-bgcolor;
+    }
+  }
+  &.yay-hide .yaybar {
+    transition: clip $yay--transition;
+    transform: none;
+    clip: rect(0 0 9999px 0);
+    clip: rect(0, 0, 9999px, 0);
+    
+    > div {
+      transform: translate3d(-100%, 0, 0);
+    }
+  }
+
+  // remove all hacks for small sidebar
+  .yaybar.yay-hide-to-small {
+    transition: transform $yay--transition, width $yay--transition;
+    clip: auto;
+    background: $yay--bgcolor;
+    border-right: 1px solid #DEE1EC;
+    
+    &.yay-light {
+      background: $yay--l-bgcolor;
+    }
+
+    > div {
+      transform: none;
+      background: none;
+      border-right: none;
+    }
+  }
+  &.yay-hide .yaybar.yay-hide-to-small {
+    transition: transform $yay--transition, width $yay--transition;
+    clip: auto;
+
+    > div {
+      transform: none;
+    }
+  }
+}

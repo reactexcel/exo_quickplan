@@ -1,0 +1,212 @@
+@import '../../../node_modules/normalize.css/normalize.css';
+@import '../variables.scss';
+@import '../../assets/tpl/sass/exo-colors';
+@import '../../assets/tpl/sass/parts/_materialize_components/_icons-material-design.scss';
+@import '../../../node_modules/react-select2-wrapper/css/select2.min.css';
+
+/* ==========================================================================
+   GENERAL
+   ========================================================================== */
+
+html {
+  background-color: $white;
+}
+
+h1 {
+  font-size: 2.5em;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: normal;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 65px;
+}
+
+.app {
+  background-color: #eaeaea;
+  flex: 1;
+
+  .tools {
+    img {
+      padding: 13px;
+      width: 55px;
+      height: 55px;
+      text-align: center;
+    }
+  }
+}
+
+.hover {
+  cursor: pointer;
+}
+
+
+/* ==========================================================================
+   RESPONSIVE TEXTS
+   ========================================================================== */
+
+// @media screen and (max-width: 992px) {
+//   p, .btn, .btn_1, input, div, span, h4, sup {
+//     font-size: 99% !important;
+//   }
+//   h1 {
+//     font-size: 34px !important;
+//   }
+//   h2 {
+//     font-size: 32px !important;
+//   }
+//   h3 {
+//     font-size: 28px !important;
+//   }
+//   input, .btn, .btn_1 {
+//     height: 34px !important;
+//     padding: 6px 12px !important;
+//     font-size: 14px !important;
+//     line-height: 1.42857143 !important;
+//     border-radius: 4px !important;
+//   }
+//   select {
+//     height: 34px !important;
+//     line-height: 34px !important;
+//   }
+// }
+@media screen and (min-width: 300px) {
+  #test{
+    position:absolute;
+    height: 435px;
+    justify-content: center;
+    right:97%;
+  }
+}
+@media screen and (min-width: 1500px) {
+  #test{
+    position:absolute;
+    height: 435px;
+    justify-content: center;
+    right:96%;
+  }
+}
+@media screen and (min-width: 1850px) {
+  #test{
+    position:absolute;
+    height: 435px;
+    justify-content: center;
+    right:95%;
+  }
+}
+
+
+@media screen and (min-width: 1960px) {
+  hr{
+    width: 1008px !important;
+  }
+  #test{
+    position:absolute;
+    height: 435px;
+    justify-content: center;
+    right:95%;
+  }
+}
+@media screen and (min-width: 2300px) {
+  #test{
+    position:absolute;
+    height: 435px;
+    justify-content: center;
+    right:94%;
+  }
+}
+@media screen and (min-width: 2700px) {
+  #test{
+    position:absolute;
+    height: 435px;
+    justify-content: center;
+    right:93%;
+  }
+}
+@media screen and (min-width: 5600px) {
+  #test{
+    position:absolute;
+    height: 435px;
+    justify-content: center;
+    right:92.7%;
+  }
+}
+@media screen and (min-width: 5700px) {
+  #test{
+    position:absolute;
+    height: 435px;
+    justify-content: center;
+    right:92.5%;
+  }
+}
+@media screen and (min-width: 9700px) {
+  #test{
+    position:absolute;
+    height: 435px;
+    justify-content: center;
+    right:92%;
+  }
+}
+
+// @media screen and (max-width: 768px) {
+//   p, .btn, .btn_1, input, div, span, h4, sup {
+//     font-size: 97% !important;
+//   }
+//   h1 {
+//     font-size: 30px !important;
+//   }
+//   h2 {
+//     font-size: 28px !important;
+//   }
+//   h3 {
+//     font-size: 26px !important;
+//   }
+//   input, .btn, .btn_1 {
+//     height: 30px !important;
+//     padding: 5px 10px !important;
+//     font-size: 12px !important;
+//     line-height: 1.5 !important;
+//     border-radius: 3px !important;
+//   }
+//   select {
+//     height: 30px !important;
+//     line-height: 30px !important;
+//   }
+// }
+
+/* ==========================================================================
+   LOADING
+   ========================================================================== */
+#loading {
+  z-index: 999999;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background-color: rgba(#f2f2f2, 0.5);
+  padding: 40px;
+  border-radius: 25px;
+}
+
+
+
+/* ==========================================================================
+   COLORS
+   ========================================================================== */
+a {
+  color: $primary-color;
+}
+.test{
+  span:nth-child(1){
+    #select2-allergies-results{
+      height: 180px;
+    }
+  }
+}

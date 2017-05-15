@@ -1,0 +1,23 @@
+[
+  {
+    "order": 1,
+    "label": "am",
+    "mealLabel": "Breakfast",
+    "PickupTime": 700,
+    "DropoffTime": 1300
+  },
+  {
+    "order": 2,
+    "label": "pm",
+    "mealLabel": "Lunch",
+    "PickupTime": 1100,
+    "DropoffTime": 1700
+  },
+  {
+    "order": 3,
+    "label": "eve",
+    "mealLabel": "Dinner",
+    "PickupTime": 1700,
+    "DropoffTime": 2300
+  }
+]

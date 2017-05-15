@@ -1,0 +1,25 @@
+/*
+ * Nano Scroller
+ */
+.nano > .nano-pane {
+  width: 5px;
+  background: rgba(0,0,0,0.4);
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  z-index: 999;
+
+  > .nano-slider {
+    background: $secondary-color;
+    margin: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+  }
+}
+
+/* RTL Nano Scroller */
+html.rtl .nano > .nano-pane {
+  right: auto;
+  left: 0;
+}

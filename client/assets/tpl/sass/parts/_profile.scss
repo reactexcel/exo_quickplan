@@ -1,0 +1,43 @@
+
+/*
+* Profile page
+*/
+.profile-info {
+  td {
+    vertical-align: top;
+    padding: 0;
+  }
+  .photo {
+    width: 160px;
+
+    img {
+      max-width: 100%;
+    }
+  }
+  
+  .contacts {
+    margin-top: .8rem;
+  }
+  .contacts a {
+    display: inline-block;
+    background-color: #eee;
+    font-size: 1.6rem;
+    margin-right: .5rem;
+    margin-bottom: .5rem;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+  }
+}
+.profile-skills {
+  .skill {
+    display: inline-block;
+    color: #fff;
+    background-color: $primary-color;
+    padding: 3px 6px;
+    border-radius: 2px;
+    margin-right: 2px;
+    margin-bottom: 4px;
+  }
+}

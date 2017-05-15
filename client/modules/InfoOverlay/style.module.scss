@@ -1,0 +1,40 @@
+.roomCategoryWrapper {
+  h6 {
+    display: inline-block;
+  }
+
+  .roomItem {
+    margin-top: 10px;
+    padding-bottom: 0 !important;
+    &:not(:last-child) {
+      border-bottom: 1px solid #e0e0e0;
+    }
+  }
+  .promotion {
+    li {
+      list-style: circle inside;
+    }
+  }
+}
+
+.pinRotationOn {
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  -webkit-transform: rotate(45deg) !important;
+  -ms-transform: rotate(45deg) !important;
+  transform: rotate(45deg) !important;
+}
+
+.pinRotationOff {
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}

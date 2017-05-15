@@ -1,0 +1,17 @@
+/* PhotoSwipe gallery */
+.photoswipe-gallery {
+  a {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-touch-callout: none;
+    display: block;
+    width: 100%;
+    line-height: 0;
+  }
+  a img {
+    width: 100%;
+    height: auto;
+  }
+  a figure {
+    display: none;
+  }
+}

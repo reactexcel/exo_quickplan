@@ -1,0 +1,63 @@
+/*
+ * Calendar
+ */
+.fc-content-skeleton thead {
+  border: none;
+}
+.fc-unthemed .fc-today {
+  background: lighten( $secondary_color, 30 );
+}
+.fc-other-month {
+  background: #F9F9F9;
+}
+.fc-day-header {
+  background: #F9F9F9;
+  height: 40px;
+  line-height: 40px;
+}
+.fc-event {
+  cursor: pointer;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 10px;
+  border: none;
+  background: $secondary_color;
+}
+
+.fc h2 {
+  font-size: 1.5rem;
+  line-height: 1.65rem;
+  margin: .6rem 0;
+}
+
+.fc button {
+  @extend .btn;
+  text-shadow: none;
+  border: none;
+  background-image: none;
+  height: 36px;
+  padding: 0 2rem;
+
+  &.fc-state-hover {
+    @extend .btn:hover;
+  }
+
+  &.fc-state-active {
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.26);
+    background: lighten($button-color, 5%);
+  }
+}
+
+.card .fc-toolbar {
+  margin: 0;
+  padding: $contentPadding;
+}
+.card td.fc-widget-header,
+.card .fc-body > tr > td.fc-widget-content {
+  border-left: 0;
+  border-right: 0;
+}
+
+#events-list .fc-event + .fc-event {
+  margin-top: 10px;
+}

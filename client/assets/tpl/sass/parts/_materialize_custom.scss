@@ -1,0 +1,415 @@
+/* Custom Materialize.css styles */
+
+// TYPOGRAPHY
+a {
+  text-decoration: none;
+}
+
+html{
+  font-size: $font-size;
+  line-height: 1.5;
+  color: $off-black;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  
+  @media only screen and (min-width: 0) {
+    font-size: $font-size;
+  }
+  
+  @media only screen and (min-width: $medium-screen) {
+    font-size: $font-size;
+  }
+  
+  @media only screen and (min-width: $large-screen) {
+    font-size: $font-size;
+  }
+}
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-weight: 400;
+  letter-spacing: 0.02rem;
+  margin: 0;
+  clear: both;
+  line-height: 1.1;
+}
+
+// Header Styles
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
+.h1 a, .h2 a, .h3 a, .h4 a, .h5 a, .h6 a {
+  font-weight: inherit;
+}
+h1, .h1 { font-size: $h1-fontsize; line-height: 1.1*$h1-fontsize; margin: ($h1-fontsize / 2.5) 0;}
+h2, .h2 { font-size: $h2-fontsize; line-height: 1.1*$h2-fontsize; margin: ($h2-fontsize / 2.5) 0;}
+h3, .h3 { font-size: $h3-fontsize; line-height: 1.1*$h3-fontsize; margin: ($h3-fontsize / 2.5) 0;}
+h4, .h4 { font-size: $h4-fontsize; line-height: 1.1*$h4-fontsize; margin: ($h4-fontsize / 2.5) 0;}
+h5, .h5 { font-size: $h5-fontsize; line-height: 1.1*$h5-fontsize; margin: ($h5-fontsize / 2.5) 0;}
+h6, .h6 { font-size: $h6-fontsize; line-height: 1.1*$h6-fontsize; margin: ($h6-fontsize / 2.5) 0;}
+
+
+// GRID
+.container {
+  padding: 0 $gutter-width;
+}
+.row {
+  margin-top: $gutter-width;
+  margin-right: -1 * $gutter-width;
+  margin-bottom: -1 * $gutter-width;
+
+  .col {
+    padding-bottom: $gutter-width;
+    padding-right: $gutter-width;
+    padding-left: 0;
+  }
+}
+
+
+// CARDS
+.card-panel {
+  margin: 0;
+
+  + .card-panel,
+  + .card {
+    margin-top: $card-padding;
+  }
+
+  &:after, &:before {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.sortable .card > .title,
+.sortable-ghost {
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAABwSURBVEjH7ZJBEsAgCAMT/v/n9NCOSqe2oD2yNx1JggB4BCEFWyFASP2KMQE7ywWhe/tTRGCGogLk02tFctiW/SUgaMyQG4PdPzDn31rQbMb8FiAXgvsEJNax1yVlVGAjA93apP3HFhZTGIqiKH7iADB6HxPlHdNVAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE0LTA3LTA3VDEzOjQ5OjEwKzAyOjAwm7WiFAAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxNC0wNy0wN1QxMzo0OToxMCswMjowMOroGqgAAAAASUVORK5CYII="), move;
+}
+
+.card {
+  margin: 0;
+
+  + .card-panel,
+  + .card {
+    margin-top: $card-padding;
+  }
+
+  .content {
+    padding: $card-padding;
+    overflow: hidden;
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .title {
+    width: 100%;
+    padding: 10px $card-padding;
+    border-radius: 2px 2px 0 0;
+
+    &:after, &:before {
+      content: '';
+      display: block;
+      clear: both;
+    }
+
+    h5 {
+      float: left;
+      font-size: 1.2rem;
+      line-height: 2rem;
+      margin: 0;
+
+      i {
+        margin-right: .3rem;
+      }
+    }
+
+    .minimize, .close {
+      float: right;
+      width: 20px;
+      text-align: center;
+      color: inherit;
+
+      transition: transform 300ms ease-in-out;
+
+      > i {
+        font-size: 1.2rem;
+        line-height: 2rem;
+      }
+    }
+  }
+ 
+  &.minimized {
+    .content {
+      display: none;
+    }
+    .minimize {
+      transform: rotate(-180deg);
+    }
+  }
+ 
+  .card-title {
+    color: #fff;
+  }
+
+
+  &.small {
+    font-size: 100%; // fix small classname
+
+    .card-image {
+      height: 150px;
+    }
+    .card-content {
+      height: 150px;
+    }
+
+    height: auto;
+  }
+ 
+  &.medium {
+    .card-image {
+      height: 250px;
+    }
+    .card-content {
+      height: 150px;
+    }
+    height: auto;
+  }
+ 
+  &.large {
+    .card-image {
+      height: 330px;
+    }
+    .card-content {
+      height: 170px;
+    }
+    height: auto;
+  }
+}
+.card.large .card-action, .card.medium .card-action, .card.small .card-action {
+  position: relative;
+}
+
+
+// NAVBAR
+nav {
+  .brand-logo {
+    position: relative;
+    vertical-align: top;
+
+    @media #{$small-and-down} {
+      display: none;
+    }
+    @media #{$medium-and-down} {
+      left: 0;
+      transform: none;
+    }
+  }
+
+  ul {
+    float: right;
+    .sp-cancel:hover,
+    a:hover,
+    li.active {
+      background-color: rgba(0,0,0,0.04);
+    }
+  }
+  .nav-wrapper i {
+    display: block;
+    font-size: 2rem;
+
+    @media #{$medium-and-up} {
+      font-size: 2rem;
+    }
+  }
+}
+
+
+// DROPDOWN
+.dropdown-content {
+  li {
+    min-height: auto;
+  }
+  li > a,
+  li > span {
+    font-size: 1rem;
+    padding: 1rem 1rem;
+
+    i {
+      margin-bottom: 2px;
+      margin-right: 4px;
+    }
+  }
+  li > a:hover,
+  li.active {
+    background: none;
+  }
+}
+
+
+// TABS
+.tabs .tab {
+  padding: 0;
+}
+
+
+// BLOCKQUOTE
+blockquote {
+  border-left: 5px solid;
+}
+
+
+// BUTTONS
+.btn-extra {
+  height: 54px;
+  line-height: 54px;
+  font-size: 1.1rem;
+}
+.btn-extra i {
+  font-size: 1.8rem;
+}
+.btn-small {
+  height: 25.2px;
+  line-height: 25px;
+  font-size: .8rem;
+}
+.btn-small i {
+  font-size: 1.3rem;
+}
+
+.btn-floating i {
+  vertical-align: baseline;
+}
+.btn-floating.btn-extra {
+  width: 65px;
+  height: 65px;
+}
+.btn-floating.btn-extra i {
+  line-height: 65px;
+}
+.btn-floating.btn-small {
+  width: 29.6px;
+  height: 29.6px;
+}
+.btn-floating.btn-small i {
+  line-height: 29.6px;
+}
+
+.btn-rounded {
+  border-radius: 30px;
+}
+
+.btn-group {
+  display: inline-block;
+  vertical-align: bottom;
+}
+.btn-group>.btn-large:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group>.btn:not(:first-child):not(:last-child):not(.dropdown-toggle), .fc .btn-group>button:not(:first-child):not(:last-child):not(.dropdown-toggle), .sp-container .btn-group>button:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+  border-radius: 0;
+}
+.btn-group>.btn-large:first-child:not(:last-child):not(.dropdown-toggle), .btn-group>.btn:first-child:not(:last-child):not(.dropdown-toggle), .fc .btn-group>button:first-child:not(:last-child):not(.dropdown-toggle), .sp-container .btn-group>button:first-child:not(:last-child):not(.dropdown-toggle) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.btn-group>.btn-large:last-child:not(:first-child), .btn-group>.btn:last-child:not(:first-child), .btn-group>.dropdown-toggle:not(:first-child), .fc .btn-group>button:last-child:not(:first-child), .sp-container .btn-group>button:last-child:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.btn-group>.btn, .btn-group>.btn-large, .fc .btn-group>button, .sp-container .btn-group>button {
+  float: left;
+}
+
+
+// COLLAPSIBLE
+.collapsible.popout {
+  box-shadow: none !important;
+}
+
+
+// PAGINATION
+.pagination li {
+  vertical-align: middle;
+}
+
+
+// MATERIALBOX
+#materialbox-overlay,
+.materialbox-caption {
+  z-index: 1001;
+}
+.materialboxed.active {
+  z-index: 1002 !important;
+}
+
+
+// NAVBAR BADGE
+nav ul a span.badge {
+  position: absolute;
+  line-height: inherit;
+}
+
+
+// WAVES
+.waves-effect {
+  &.waves-red .waves-ripple {
+    background-color: rgba(color("red"), .70);
+  }
+  &.waves-yellow .waves-ripple {
+    background-color: rgba(color("yellow"), .70);
+  }
+  &.waves-orange .waves-ripple {
+    background-color: rgba(color("orange"), .70);
+  }
+  &.waves-purple .waves-ripple {
+    background-color: rgba(color("purple"), 0.70);
+  }
+  &.waves-green .waves-ripple {
+    background-color: rgba(color("green"), 0.70);
+  }
+  &.waves-teal .waves-ripple {
+    background-color: rgba(color("teal"), 0.70);
+  }
+
+
+  &.waves-pink .waves-ripple {
+    background-color: rgba(color("pink"), 0.7);
+  }
+  &.waves-deep-purple .waves-ripple {
+    background-color: rgba(color("deep-purple"), 0.7);
+  }
+  &.waves-indigo .waves-ripple {
+    background-color: rgba(color("indigo"), 0.7);
+  }
+  &.waves-blue .waves-ripple {
+    background-color: rgba(color("blue"), 0.7);
+  }
+  &.waves-light-blue .waves-ripple {
+    background-color: rgba(color("light-blue"), 0.7);
+  }
+  &.waves-cyan .waves-ripple {
+    background-color: rgba(color("cyan"), 0.7);
+  }
+  &.waves-teal .waves-ripple {
+    background-color: rgba(color("teal"), 0.7);
+  }
+  &.waves-light-green .waves-ripple {
+    background-color: rgba(color("light-green"), 0.7);
+  }
+  &.waves-lime .waves-ripple {
+    background-color: rgba(color("lime"), 0.7);
+  }
+  &.waves-amber .waves-ripple {
+    background-color: rgba(color("amber"), 0.7);
+  }
+  &.waves-deep-orange .waves-ripple {
+    background-color: rgba(color("deep-orange"), 0.7);
+  }
+  &.waves-brown .waves-ripple {
+    background-color: rgba(color("brown"), 0.7);
+  }
+}
+
+.waves-circle.btn-floating i {
+  line-height: 32.5px;
+}

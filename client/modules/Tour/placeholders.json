@@ -1,0 +1,18 @@
+{
+  "freeTime": {
+    "name": "Free time",
+    "icon": "timelapse"
+  },
+  "custom": {
+    "name": "Custom tour",
+    "icon": "ticket-confirmation"
+  },
+  "customTour": {
+    "name": "Custom tour",
+    "icon": "ticket-confirmation"
+  },
+  "considerThis": {
+    "name": "Consider this",
+    "icon": "dots-horizontal"
+  }
+}

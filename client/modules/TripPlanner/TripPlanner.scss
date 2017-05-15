@@ -1,0 +1,432 @@
+
+@import '../variables';
+@import '../../assets/mdi/scss/materialdesignicons';
+.select{
+   div:nth-child(1) {
+   input{
+     border-bottom : 1px solid black;
+   }
+   input:not(:hover){
+     border-bottom : 2.5px solid #6abda0;
+   }
+ }
+}
+.card {
+  .content {
+    overflow: visible;
+  }
+}
+.country{
+  .content{
+    padding : 0 2rem 2rem;
+  }
+}
+
+.city {
+  .content {
+    padding: 0;
+    .table {
+     margin: 0;
+     tr {
+      height: 50px;
+     }
+    }
+    .hotel {
+      border: 1px solid #dddddd;
+    }
+  }
+}
+
+.grid {
+  .standard-row {
+    cursor: pointer;
+  }
+  .griddle-footer {
+    select {
+      display: inline-block;
+      width: auto;
+    }
+  }
+}
+
+table, th, td {
+  border: 1px solid #dddddd;
+  text-align: center;
+  height: 50px;
+}
+
+::-webkit-input-placeholder {
+  color: #1a1a1a;
+}
+
+.col {
+  padding-bottom: 1rem !important;
+}
+
+.btn-select {
+  font-size: 1.4em;
+}
+
+/* ==========================================================================
+   ScrollBar
+   ========================================================================== */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #eaeaea;
+  border-left: 1px solid #ccc;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #aaa;
+}
+
+/* ==========================================================================
+   Detail
+   ========================================================================== */
+
+.active-detail {
+  box-shadow: 5px 5px 5px #9B9B9B;
+}
+
+.bookedColor {
+  color: #666666 !important;
+}
+
+.detail {
+  border: 1px solid #F2F2F2;
+
+  .card {
+    .title {
+      background-color: #D8EEE6;
+    }
+  }
+
+  .head {
+    padding: 10px;
+
+    h4 {
+      color: #A9A9A9;
+      display: inline-block;
+      float: left;
+    }
+
+    .availability {
+      float: right;
+      text-align: right;
+    }
+  }
+
+  i {
+    font-size: 1.5em;
+  }
+
+  .configure {
+    .general {
+      padding: 20px;
+
+      .availabilityInfo {
+        padding: 10px 0;
+
+        svg {
+          vertical-align: top !important;
+        }
+
+        div {
+          display: inline;
+          font-size: 1.1em;
+        }
+      }
+    }
+  }
+
+  .extra input {
+    height: auto;
+  }
+}
+
+/* ==========================================================================
+   Tour Modal
+   ========================================================================== */
+
+.hide-scrollbar {
+ overflow-y: hidden !important;
+}
+
+.tour-modal {
+  width: 90%;
+  max-height: 90% !important;
+  top: 60px !important;
+  overflow-y: auto;
+
+  .modal-content {
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  &-header {
+    padding: 25px;
+    text-align: center;
+
+    h3:first-child {
+      position: absolute;
+      left: 25px;
+    }
+
+    h3:last-child {
+      display: inline;
+    }
+  }
+
+  &-filter {
+    padding: 20px 25px 10px;
+    border-bottom: 2px solid #CCC;
+
+    &-top {
+      margin-bottom: 5px;
+      a {
+        margin-right: 60px;
+      }
+
+      i {
+        font-size: 25px;
+        padding-bottom: 5px;
+      }
+    }
+
+    &-bottom {
+      > div {
+        padding-bottom: 10px !important;
+      }
+
+      .select2-container {
+        width: 100% !important;
+
+       .select2-selection {
+         background-color: inherit;
+       }
+      }
+    }
+  }
+
+  &-content {
+    height: 810px;
+
+    .slot {
+      position: relative;
+      height: 240px;
+      width: 100%;
+      border-bottom: 1px solid #CCC;
+      padding-left: 0;
+
+      .dropdown {
+        position: absolute;
+        bottom: 0;
+        left: 25px;
+      }
+
+      .timeSlot {
+        position: absolute;
+        top: 70px;
+      }
+
+      .rotate {
+        transform: rotate(-90deg);
+        transform-origin: top left;
+        position: absolute;
+        bottom: 30px;
+        left: 25px;
+
+        h5 {
+          display: inline-block;
+          margin-bottom: 25px;
+        }
+
+        input[type='checkbox'] {
+          left: 0;
+        }
+
+      }
+    }
+
+    .tour-slider {
+      height: inherit;
+      width: 25%;
+      z-index: 30;
+      position: relative;
+      display: inline-block;
+      transition: all 1s ease-out;
+      overflow-x: scroll;
+      overflow-y: hidden;
+
+      .date-title {
+        height: 70px;
+        margin-left: 20px;
+        padding-top: 15px;
+        border-bottom: 1px solid #CCC;
+      }
+    }
+
+    .tour-selection {
+      background: #f2f2f2;
+      position: relative;
+      display: inline-block;
+      vertical-align: top;
+      transition: all 1s ease-out;
+      width: 70%;
+      height: inherit;
+      overflow-x: scroll;
+      overflow-y: hidden;
+
+      .search-box {
+        border-bottom: 1px solid #CCC;
+      }
+    }
+
+    .togglebar {
+      height: inherit;
+      line-height: 795px;
+      vertical-align: top;
+      display: inline-block;
+      border-right: 1px solid #CCC;
+    }
+
+    .tour-canvas {
+      position: relative;
+      height: inherit;
+    }
+  }
+
+  &-overlay {
+
+    &-appear {
+      transform: scale(0.5);
+      transition: all .3s ease-out;
+
+      &-active {
+        transform: scale(1);
+      }
+    }
+
+    &-bg {
+      position: absolute;
+      background: rgba(33, 33, 33, .8);
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 30;
+
+      .btn-close {
+        position: absolute;
+        font-size: 3rem;
+        left: 2rem;
+        top: .2rem;
+      }
+    }
+
+    &-content {
+      position: absolute;
+      background: #FFFFFF;
+      padding: 10px 30px;
+      top: 6rem;
+      left: 6rem;
+      right: 0;
+      bottom: 0;
+      z-index: 30;
+      overflow: auto;
+    }
+  }
+}
+
+.ta-tour-modal {
+  width: 80%;
+  height: 87% !important;
+  top: 8% !important;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 90%;
+  max-width:  840px;
+
+  .modal-content {
+    padding: 0;
+    overflow: hidden;
+  }
+
+  &-header {
+    padding: 15px 25px;
+    text-align: left;
+    border-bottom: 2px solid #e0e0e0;
+  }
+
+  &-content {
+    position: relative;
+    border-bottom: 1px solid #e0e0e0;
+      .placeholder {
+        width: 180px;
+        height: 200px;
+        background-color: #f2f2f2;
+        border: 2px solid #cccccc;
+        margin: 5px 40px auto;
+        color: #d7d7d7;
+        text-align: center;
+        line-height: 180px;
+      }
+
+    .ta-tour-selection {
+      width: 33%;
+      min-width: 260px;
+      max-width: 280px;
+      height: 700px;
+      z-index: 30;
+      position: relative;
+      display: inline-block;
+      transition: all 1s ease-out;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      border-right: 1px solid #e0e0e0;
+    }
+
+    .ta-tour-details {
+      position: relative;
+      display: inline-block;
+      vertical-align: top;
+      transition: all 1s ease-out;
+      width: 67%;
+      height: 700px;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      padding: 0;
+      margin: 0;
+
+      .card {
+        background-color: inherit;
+        padding: 0;
+        margin: 0;
+
+        .content {
+          padding: 5px 10px;
+          overflow-y: scroll;
+          overflow-x: hidden;
+        }
+      }
+    }
+  }
+}
+
+.modal-action-button {
+  font-size: 1.2em;
+}
+
+.change-order-modal {
+  width: 60% !important;
+  max-height: 90% !important;
+  .modal-content {
+    overflow-x: hidden;
+    padding-top: 5px !important;
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "Car": "car",
+  "Taxi": "taxi",
+  "Van": "truck",
+  "Train": "train",
+  "Bus": "bus",
+  "Boat": "ferry",
+  "Public transport": "tram",
+  "Plane": "airplane",
+  "Helicopter": "fan",
+  "Other": "label-outline"
+}

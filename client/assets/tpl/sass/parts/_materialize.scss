@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+/* z-depth shadows */
+$shadows:
+  '0 0 0 0 transparent',
+  '0 1px 2px rgba(0, 0, 0, 0.26)',
+  '0 2px 5px rgba(0, 0, 0, 0.4)',
+  '0 5px 15px rgba(0, 0, 0, 0.4)',
+  '0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19)',
+  '0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21)',
+  '0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22)';
+
+/*
+  '0 1px 6px 0 rgba(0,0,0,.12),0 1px 6px 0 rgba(0,0,0,.12)',
+  '0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15)',
+  '0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
+  '0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19)',
+  '0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21)',
+  '0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22)';
+*/
+
+@mixin shadow($size: 1, $important: false) {
+  @if $important != false {
+    box-shadow: #{nth($shadows, $size + 1)} !important;
+  } @else {
+    box-shadow: #{nth($shadows, $size + 1)};
+  }
+}
+.z-depth {
+  @for $i from 0 through length($shadows) - 1 {
+    &-#{$i} {
+      @include shadow($i, true);
+
+      &-hover {
+        transition: box-shadow 300ms ease-in-out; //transform 300ms ease-in-out;
+      }
+      &-hover:hover {
+        @extend .z-depth-#{$i};
+      }
+    }
+  }
+}
+
+
+// Variables;
+// @import "_materialize_components/variables";
+
+// Reset
+@import "_materialize_components/normalize";
+
+// components
+@import "_materialize_components/global";
+// @import "_materialize_components/icons-material-design";
+@import "_materialize_components/grid";
+@import "_materialize_components/navbar";
+//@import "_materialize_components/roboto";
+@import "_materialize_components/typography";
+@import "_materialize_components/cards";
+@import "_materialize_components/carousel";
+@import "_materialize_components/toast";
+@import "_materialize_components/tabs";
+@import "_materialize_components/tooltip";
+@import "_materialize_components/buttons";
+@import "_materialize_components/dropdown";
+@import "_materialize_components/waves";
+@import "_materialize_components/modal";
+@import "_materialize_components/collapsible";
+@import "_materialize_components/chips";
+@import "_materialize_components/materialbox";
+@import "_materialize_components/form";
+@import "_materialize_components/table_of_contents";
+@import "_materialize_components/sideNav";
+@import "_materialize_components/preloader";
+@import "_materialize_components/slider";
+@import "_materialize_components/date_picker/default.scss";
+@import "_materialize_components/date_picker/default.date.scss";
+@import "_materialize_components/date_picker/default.time.scss";

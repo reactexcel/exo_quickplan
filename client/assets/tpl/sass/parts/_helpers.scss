@@ -1,0 +1,299 @@
+/*=================================================
+  HELPERS
+===================================================
+
+/*===================================================
+  Height Helpers
+===================================================== */
+/* Height helpers, primarly used with panel widgets */
+
+$helper-h: 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000;
+
+.h-a {
+  height: auto !important;
+}
+
+// Example .mh-30
+@each $item in $helper-h {
+  .mh-#{$item} {
+    max-height: #{$item}px !important;
+  }
+}
+
+// Example .h-30
+@each $item in $helper-h {
+  .h-#{$item} {
+    height: #{$item}px !important;
+  }
+}
+
+/*===================================================
+  General/Misc Helpers
+===================================================== */
+/* overflow Helpers */
+.of-a {
+  overflow: auto !important;
+}
+.of-h {
+  overflow: hidden !important;
+}
+.of-v {
+  overflow: visible !important;
+}
+.of-x-a {
+  overflow-x: auto !important;
+}
+.of-x-h {
+  overflow-x: hidden !important;
+}
+.of-x-v {
+  overflow-x: visible !important;
+}
+.of-y-a {
+  overflow-y: auto !important;
+}
+.of-y-h {
+  overflow-y: hidden !important;
+}
+.of-y-v {
+  overflow-y: visible !important;
+}
+
+
+/* Vertical Align Helpers */
+.va-t {
+  vertical-align: top !important;
+}
+.va-m {
+  vertical-align: middle !important;
+}
+.va-b {
+  vertical-align: bottom !important;
+}
+.va-s {
+  vertical-align: super !important;
+}
+
+/* Horizontal Align */
+.align-left {
+  text-align: left;
+}
+.align-right {
+  text-align: right;
+}
+.align-center {
+  text-align: center;
+}
+.align-justify {
+  text-align: justify;
+}
+
+/* Inline Block Helper */
+.dib {
+  display: inline-block !important;
+}
+/* pointer cursor */
+.cursor {
+  cursor: pointer !important;
+}
+
+/*===============================================
+  Text Helpers
+================================================= */
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+
+
+// Example .fw-300
+$helper-fw: 100, 200, 300, 400, 500, 600, 700, 800, 900;
+@each $item in $helper-fw {
+  .fw-#{$item} {
+    font-weight: #{$item} !important;
+  }
+}
+
+
+// Example .fs-14
+$helper-fs: 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30, 35, 40, 45, 50;
+@each $item in $helper-fs {
+  .fs-#{$item} {
+    font-size: #{$item}px !important;
+  }
+}
+
+/*===============================================
+  Padding Helpers
+================================================= */
+$helper-p: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30, 35, 40, 45, 50;
+@each $item in $helper-p {
+  .p-#{$item} {
+    padding: #{$item}px !important;
+  }
+}
+@each $item in $helper-p {
+  .pt-#{$item} {
+    padding-top: #{$item}px !important;
+  }
+}
+@each $item in $helper-p {
+  .pl-#{$item} {
+    padding-left: #{$item}px !important;
+  }
+}
+@each $item in $helper-p {
+  .pr-#{$item} {
+    padding-right: #{$item}px !important;
+  }
+}
+@each $item in $helper-p {
+  .pb-#{$item} {
+    padding-bottom: #{$item}px !important;
+  }
+}
+
+/*===============================================
+  Margin Helpers
+================================================= */
+/* margin center helper */
+.mauto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+$helper-m: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30, 35, 40, 45, 50;
+@each $item in $helper-m {
+  .m-#{$item} {
+    margin: #{$item}px !important;
+  }
+}
+@each $item in $helper-m {
+  .mt-#{$item} {
+    margin-top: #{$item}px !important;
+  }
+}
+@each $item in $helper-m {
+  .ml-#{$item} {
+    margin-left: #{$item}px !important;
+  }
+}
+@each $item in $helper-m {
+  .mr-#{$item} {
+    margin-right: #{$item}px !important;
+  }
+}
+@each $item in $helper-m {
+  .mb-#{$item} {
+    margin-bottom: #{$item}px !important;
+  }
+}
+
+
+/* Negative Margin Helpers */
+@each $item in $helper-m {
+  .mn-#{$item} {
+    margin: #{$item * -1}px !important;
+  }
+}
+@each $item in $helper-m {
+  .mnt-#{$item} {
+    margin-top: #{$item * -1}px !important;
+  }
+}
+@each $item in $helper-m {
+  .mnl-#{$item} {
+    margin-left: #{$item * -1}px !important;
+  }
+}
+@each $item in $helper-m {
+  .mnr-#{$item} {
+    margin-right: #{$item * -1}px !important;
+  }
+}
+@each $item in $helper-m {
+  .mnb-#{$item} {
+    margin-bottom: #{$item * -1}px !important;
+  }
+}
+
+
+/*===============================================
+  LineHeight Helpers
+================================================= */
+$helper-lh: 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50;
+@each $item in $helper-lh {
+  .lh-#{$item} {
+    line-height: #{$item}px !important;
+  }
+}
+
+/*===============================================
+  Border Helpers
+================================================= */
+$helper-br: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 18, 20, 25, 30, 35;
+@each $item in $helper-br {
+  .br-#{$item} {
+    border-radius: #{$item}px !important;
+  }
+}
+
+/*===============================================
+  Max Width Helpers
+================================================= */
+.fluid-width {
+  width: 100% !important;
+}
+
+// width
+$helper-w: 0, 10, 20, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100, 120, 140, 160, 180, 200, 220, 240, 260, 280, 300, 320, 340, 360, 380, 400;
+@each $item in $helper-w {
+  .w-#{$item} {
+    width: #{$item}px !important;
+  }
+}
+
+// max-width
+$helper-mw: 0, 10, 20, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100, 120, 140, 160, 180, 200, 240, 280, 320, 360, 400, 450, 500, 550, 600, 700, 800, 900, 1000, 1100, 1200;
+@each $item in $helper-mw {
+  .mw-#{$item} {
+    max-width: #{$item}px !important;
+  }
+}
+
+// min-width
+@each $item in $helper-mw {
+  .mnw-#{$item} {
+    min-width: #{$item}px !important;
+  }
+}
+
+
+/*===============================================
+  Responsive Embeds
+================================================= */
+.responsive-embed {
+  position:relative;
+  display:block;
+  overflow:hidden;
+  height:0;
+  padding:0;
+
+  > .embed-item,
+  > iframe,
+  > embed,
+  > object {
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    height:100%;
+    width:100%;
+    border:0;
+  }
+}
+.responsive-embed-16x9 {
+  padding-bottom:56.25%;
+}
+.responsive-embed-4x3 {
+  padding-bottom:75%;
+}

@@ -1,0 +1,362 @@
+.accommodation-modal {
+  width: 90%;
+  max-height: 85% !important;
+  top: 80px !important;
+  overflow-y: scroll;
+
+  :global .modal-content {
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  &-header {
+    padding: 25px 25px 10px;
+    text-align: left;
+  }
+
+  &-date {
+    padding: 5px 25px;
+    border-bottom: 2px solid #CCC;
+  }
+
+  &-filter {
+    padding: 5px 25px;
+    border-bottom: 2px solid #CCC;
+
+    &-top {
+      margin-bottom: 5px;
+      a {
+        font-size: 14px;
+        margin-right: 60px;
+      }
+
+      i {
+        font-size: 25px;
+        padding-bottom: 5px;
+      }
+    }
+
+    &-bottom {
+      :global .select2-container {
+        width: 100% !important;
+
+        :global .select2-selection {
+          background-color: inherit;
+        }
+      }
+    }
+  }
+
+  &-content {
+    height: 640px;
+    .slot {
+      position: relative;
+      height: 260px;
+
+      .dropdown {
+        position: absolute;
+        bottom: 0;
+        left: 25px;
+      }
+
+      .rotate {
+        transform: rotate(-90deg);
+        transform-origin: top left;
+        position: absolute;
+        bottom: 30px;
+        left: 25px;
+
+        h5 {
+          display: inline-block;
+          margin-bottom: 25px;
+        }
+
+        input[type='checkbox'] {
+          left: 0;
+        }
+
+        label {
+          margin: 0;
+        }
+      }
+    }
+
+    .accommodation-slider {
+      height: inherit;
+      width: 20%;
+      z-index: 30;
+      position: relative;
+      display: inline-block;
+      transition: all 1s ease-out;
+      overflow-x: scroll;
+      overflow-y: hidden;
+
+      .date-title {
+        height: 70px;
+        padding-top: 15px;
+        border-bottom: 1px solid #CCC;
+      }
+    }
+
+    .accommodation-selection {
+      background: #f2f2f2;
+      position: relative;
+      margin-left: 1%;
+      display: inline-block;
+      vertical-align: top;
+      transition: all 1s ease-out;
+      width: 110%;
+      height: inherit;
+      overflow-x: scroll;
+      overflow-y: hidden;
+
+      .search-box {
+        border-bottom: 1px solid #CCC;
+      }
+
+      &-items {
+        display: flex;
+        flex-direction: column;
+        align-content: flex-start;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 560px;
+      }
+
+      &-item {
+        width: 165px;
+        height: 260px;
+        margin: 10px;
+      }
+    }
+
+    .togglebar {
+      height: inherit;
+      line-height: 585px;
+      vertical-align: top;
+      display: inline-block;
+      border-right: 1px solid #CCC;
+    }
+
+    .accommodation-canvas {
+      position: relative;
+      height: inherit;
+    }
+  }
+
+  &-overlay {
+
+    &-appear {
+      transform: scale(0.5);
+      transition: all .3s ease-out;
+
+      &-active {
+        transform: scale(1);
+      }
+    }
+
+    &-bg {
+      position: absolute;
+      background: rgba(33, 33, 33, .8);
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 30;
+
+      .btn-close {
+        position: absolute;
+        font-size: 3rem;
+        left: 2rem;
+        top: .2rem;
+      }
+    }
+
+    &-content {
+      position: absolute;
+      background: #FFFFFF;
+      padding: 10px 30px;
+      top: 6rem;
+      left: 6rem;
+      right: 0;
+      bottom: 0;
+      z-index: 30;
+      overflow-y: auto;
+
+
+      .btn-select {
+        position: absolute;
+        right: 30px;
+        bottom: 30px;
+      }
+    }
+  }
+}
+.nights {
+  position: absolute;
+  width: 100%;
+  left: 100px;
+  bottom: 4px;
+  color: white;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: bold;
+
+  i{
+    font-style:normal;
+  }
+}
+.hotelList {
+  padding: 2px 0 0px 11px;
+  // border-bottom: 1px solid #CCC;
+  display: block;
+
+  span:nth-child(1) {
+    width: 60%;
+    display: inline-block;
+  }
+
+  i:nth-child(2) {
+    display: inline-block;
+    padding-left: 10px;
+    font-style: normal;
+
+  }
+}
+
+.hotelName {
+  font-size: 10px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.amountDiv{
+  width:30%;
+  position: absolute;
+  font-weight: bold;
+  color: #ffffff;
+}
+//////////////////////////////////////////More than 3 rooms
+.hotelList3 {
+  padding: 2px 0 0px 11px;
+  // border-bottom: 1px solid #CCC;
+  display: block;
+  font-size: 10px;
+
+  span:nth-child(1) {
+    width: 60%;
+    display: inline-block;
+  }
+
+  i:nth-child(2) {
+    display: inline-block;
+    padding-left: 16px;
+    font-style: normal;
+
+  }
+}
+
+.hotelName3{
+  font-size: 9px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.amountDiv3{
+  width:30%;
+  font-size: 9px;
+  position: absolute;
+  font-weight: bold;
+  color: #ffffff;
+}
+ ////////////////////////////////////////
+ ////////////////////////////////////////// 3 rooms
+ .hotelList4 {
+   padding: 1px 0 0px 11px;
+   // border-bottom: 1px solid #CCC;
+   display: block;
+
+   span:nth-child(1) {
+     width: 60%;
+     display: inline-block;
+   }
+
+   i:nth-child(2) {
+     display: inline-block;
+     padding-left: 16px;
+     font-style: normal;
+
+   }
+ }
+
+ .hotelName4{
+   font-size: 8px;
+   font-weight: bold;
+   color: #ffffff;
+ }
+
+ .amountDiv4{
+   width:30%;
+   font-size: 9px;
+   position: absolute;
+   font-weight: bold;
+   color: #ffffff;
+ }
+  ////////////////////////////////////////
+.preselectionIcon {
+  width: 23%;
+  padding: 5px 0;
+  font-weight: bold;
+  border-radius: 2px;
+  float: right;
+  background-color: #004e42;
+  font-size: 1.5em;
+  margin-top: -10px;
+  margin-right: 9px;
+  text-align: center;
+  color: #ffffff;
+  line-height: 17px;
+}
+.pinRotationOn {
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  -webkit-transform: rotate(45deg) !important;
+  -ms-transform: rotate(45deg) !important;
+  transform: rotate(45deg) !important;
+}
+
+.pinRotationOff {
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+.dateRangePicker{
+  position: fixed;
+  margin-top:8px;
+  span{
+    i{
+      font-size: 15px;
+    }
+  }
+}
+.repeatinCount{
+  font-weight: bold;
+    font-size: 15px;
+    position: relative;
+    top: 20px;
+    left: 100px;
+    color: #499f81;
+    span{
+      font-size: 60px;
+    }
+
+}

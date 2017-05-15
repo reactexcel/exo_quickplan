@@ -1,0 +1,47 @@
+.proposal-modal {
+  width: 80% !important;
+  max-height: 90% !important;
+  font-size: 1rem;
+  .modal-content {
+    overflow-x: hidden;
+    padding-top: 5px !important;
+  }
+}
+
+.card {
+  .title {
+    padding-left: 40px;
+  }
+  .content {
+    padding-top: 5px;
+    padding-left: 40px;
+  }
+  label {
+    font-size: 12px;
+    font-weight: 400;
+  }
+}
+
+.side-nav {
+  left: 0 !important;
+  z-index: 29 !important;
+  padding-top: 65px;
+
+  label {
+    font-size: 10px;
+    font-weight: 400;
+  }
+
+  .row .col {
+    padding-right: 5px;
+  }
+}
+
+.input-field,
+input[type=text] {
+  margin: 0 !important;
+}
+
+.select-option {
+  font-size: 0.6em;
+}

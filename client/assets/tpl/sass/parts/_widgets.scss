@@ -1,0 +1,223 @@
+/*
+ * Stats Card
+ */
+.stats-card {
+  display: block;
+  position: relative;
+  overflow: hidden;
+
+  > i {
+    position: absolute;
+    font-size: 6rem;
+    right: 0;
+    bottom: -1rem;
+
+    &[class*=mdi-],
+    &[class*=ion-] {
+      bottom: -2.4rem;
+    }
+  }
+
+  .count {
+    position: relative;
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+
+  .name {
+    position: relative;
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+
+  // graph on bottom of card
+  .graph {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  // progress bar
+  .progress {
+    position: absolute;
+    border-radius: 0;
+    margin: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: none;
+
+    &.top {
+      bottom: auto;
+      top: 0;
+    }
+
+    &.background {
+      top: 0;
+      height: 100%;
+      > div {
+        height: 100%;
+      }
+    }
+  }
+  
+  // large card
+  &.large {
+    padding: 1.6rem;
+    
+    > i {
+      font-size: 8rem;
+      bottom: -1.3rem;
+    }
+    .count {
+      font-size: 3rem;
+      line-height: 3rem;
+    }
+    .name {
+      font-size: 1.2rem;
+      line-height: 1.2rem;
+    }
+  }
+}
+
+
+/*
+ * ToDo Card
+ */
+.todo-card {
+  .todo-task {
+    margin-bottom: 15px;
+  }
+
+  label {
+    color: inherit;
+    width: 100%;
+
+    .todo-remove {
+      float: right;
+      font-size: 1.5rem;
+    }
+  }
+  input:checked + label {
+    color: color('grey');
+    text-decoration: line-through;
+  }
+}
+
+
+/*
+ * Weather Card
+ */
+.weather-card,
+.weather-card-static {
+  position: relative;
+  display: block;
+  overflow: hidden;
+
+  > .row {
+    margin: 0;
+  }
+
+  .temp {
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: bold;
+    padding: 0;
+
+    .alt {
+      display: block;
+      font-weight: normal;
+      font-size: 1rem;
+      line-height: 1rem;
+    }
+  }
+
+  .city {
+    text-align: right;
+    padding: 0;
+    font-size: 1.2rem;
+  }
+
+  .icon {
+    text-align: center;
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+
+  .currently {
+    margin-top: 15px;
+  }
+}
+
+
+/*
+ * Orders Card
+ */
+.orders-card {
+  h4 {
+    margin: 0;
+  }
+  .row {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .col {
+    padding-bottom: 0;
+  }
+  .progress {
+    margin-top: 0;
+  }
+}
+
+
+/*
+ * Mail Card
+ */
+.mail-card {
+  > .row {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    > .col {
+      padding-bottom: 0;
+      > a {
+        color: inherit;
+      }
+    }
+  }
+}
+
+
+/*
+ * Image Card
+ */
+.image-card {
+  position: relative;
+  line-height: 0;
+  overflow: hidden;
+
+  .image {
+    position: relative;
+    
+    img {
+      width: 100%;
+    }
+    .title {
+      position: absolute;
+      padding: 1.3rem;
+      margin: 0;
+      left: 0;
+      bottom: 0;
+    }
+    .link {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      z-index: 2;
+    }
+  }
+  .content {
+
+  }
+}
