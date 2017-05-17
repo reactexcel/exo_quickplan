@@ -25,7 +25,7 @@
     "testExtensions": "test/**/*.@(js|jsx)"
   },
   "precommit": [
-    "lint"
+    //"lint"
   ],
   "repository": {
     "type": "git",
