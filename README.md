@@ -10,8 +10,8 @@
 
 Clone the repository to your local directory
 ```bash
-$ git clone https://github.com/lvarayut/relay-fullstack.git
-$ cd relay-fullstack
+$ git https://github.com/reactexcel/exo_quickplan.git
+$ cd exo_quickplan
 ```
 
 Install all dependencies & Start developing
@@ -20,7 +20,7 @@ $ npm install
 $ npm start
 ```
 
-Launch your favorite web browser and go to `http://localhost:3000` for Relay application or `http://localhost:8000` for GraphiQL. 
+Launch your favorite web browser and go to `http://localhost:8530` for Relay application or `http://localhost:8000` for GraphiQL. 
 
 ## Deployment
 
@@ -30,7 +30,7 @@ In order to deploy a project, it is a good practice to minify all JavaScript fil
 $ npm run deploy
 ```
 
-Again, launch your favorite web browser and go to `http://localhost:3000`.
+Again, launch your favorite web browser and go to `http://localhost:8530`.
 
 ## Schema
 
