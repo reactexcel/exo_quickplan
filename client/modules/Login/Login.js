@@ -15,6 +15,23 @@ export default class Login extends React.Component {
     changePasswordRequested: false
   };
 
+  _doGuestLogin(){
+    this.props.route.auth.login({
+      connection: 'Username-Password-Authentication',
+      responseType: 'token',
+      email: 'arun.etech2011@gmail.com',
+      password: '12345',
+      callbackURL: config.auth.callbackURL,
+      state: location.href
+    }, (err) => {
+      if (err) alert(`something went wrong: ${err.message}`);
+    });
+  }
+
+  componentWillMount() {
+    this._doGuestLogin();
+  }
+
 
   getChangePasswordLink = () => (
     <Link
@@ -52,17 +69,7 @@ export default class Login extends React.Component {
 
   handleGuestSubmit(e) {
     e.preventDefault();
-
-    this.props.route.auth.login({
-      connection: 'Username-Password-Authentication',
-      responseType: 'token',
-      email: 'arun.etech2011@gmail.com',
-      password: '12345',
-      callbackURL: config.auth.callbackURL,
-      state: location.href
-    }, (err) => {
-      if (err) alert(`something went wrong: ${err.message}`);
-    });
+    this._doGuestLogin();
   }
 
   render() {
