@@ -16,6 +16,8 @@ export default class Login extends React.Component {
   };
 
   _doGuestLogin(){
+    console.log( config.auth.callbackURL )
+    consoel.log( location.href )
     this.props.route.auth.login({
       connection: 'Username-Password-Authentication',
       responseType: 'token',

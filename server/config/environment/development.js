@@ -9,7 +9,8 @@ export default {
   auth: {
     clientId: 'yAH0klQIbmMoR3AFrsnU5rRjLck8isXQ',
     domain: 'etech.auth0.com',
-    callbackURL: 'http://localhost:8530',
+    //callbackURL: 'http://localhost:8530',
+    callbackURL: 'exoquickplan.exweb.in',
     responseType: 'token',
     secret: 'k7LUxO1wV2DLrJSsncnrS6rwvG73or8GmA3ncmrsVJjQJuQGHi77aSbo7etiBkok',
     requireAuth: false
