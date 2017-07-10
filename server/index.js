@@ -53,7 +53,8 @@ import { connect } from './data/database';
         colors: true
       },
       hot: true,
-      historyApiFallback: true
+      historyApiFallback: true,
+      disableHostCheck: true
     });
 
     // Serve static resources
