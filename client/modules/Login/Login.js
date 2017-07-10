@@ -18,16 +18,16 @@ export default class Login extends React.Component {
   _doGuestLogin(){
     console.log( config.auth.callbackURL )
     console.log( location.href )
-    this.props.route.auth.login({
-      connection: 'Username-Password-Authentication',
-      responseType: 'token',
-      email: 'arun.etech2011@gmail.com',
-      password: '12345',
-      callbackURL: config.auth.callbackURL,
-      state: location.href
-    }, (err) => {
-      if (err) alert(`something went wrong: ${err.message}`);
-    });
+    // this.props.route.auth.login({
+    //   connection: 'Username-Password-Authentication',
+    //   responseType: 'token',
+    //   email: 'arun.etech2011@gmail.com',
+    //   password: '12345',
+    //   callbackURL: config.auth.callbackURL,
+    //   state: location.href
+    // }, (err) => {
+    //   if (err) alert(`something went wrong: ${err.message}`);
+    // });
   }
 
   componentWillMount() {
