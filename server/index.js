@@ -26,6 +26,7 @@ import { connect } from './data/database';
 
     // Launch GraphQL
     const graphql = express();
+    graphql.use(cors())
     
     const authenticate = jwt({
       secret: new Buffer(config.auth.secret, 'base64'),
@@ -67,6 +68,7 @@ import { connect } from './data/database';
     app.listen(config.port, () => console.log(`Relay is listening on port ${config.port}`));
   } else if (config.env === 'production') {
     const graphql = express();
+    graphql.use(cors())
     graphql.use('/', graphQLHTTP({
       graphiql: true,
       pretty: true,
