@@ -20,5 +20,5 @@ export default {
     password: 'kiril123'
   },
   seed: false,
-  createGraph: false
+  createGraph: true
 };
