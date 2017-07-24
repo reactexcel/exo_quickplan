@@ -24,8 +24,7 @@
   "config": {
     "testExtensions": "test/**/*.@(js|jsx)"
   },
-  "precommit": [
-  ],
+  "precommit": [],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/uncircled/quickplan.git"
@@ -99,6 +98,7 @@
     "classnames": "^2.2.5",
     "cloudconvert": "^1.1.1",
     "concurrently": "^3.1.0",
+    "cors": "^2.8.4",
     "css-loader": "^0.25.0",
     "enzyme": "^2.4.1",
     "express": "^4.14.0",
