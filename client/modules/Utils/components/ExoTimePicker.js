@@ -7,7 +7,7 @@ import TimePicker from 'react-times';
 import ReactDateRangePicker from 'react-daterange-picker';
 import shortId from 'shortid';
 
-import '../../../../node_modules/react-times/css/material/default.css';
+//import '../../../../node_modules/react-times/css/material/default.css';
 
 export default class ExoTimePicker extends Component {
   static propTypes = {
