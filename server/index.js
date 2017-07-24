@@ -3,12 +3,14 @@ import path from 'path';
 import webpack from 'webpack';
 import express from 'express';
 import jwt from 'express-jwt';
+import cors from 'cors';
 import graphQLHTTP from 'express-graphql';
 import proxy from 'express-http-proxy';
 import webpackConfig from '../webpack.config';
 import config from './config/environment';
 import schema from './data/schema';
 import { connect } from './data/database';
+
 
 (async () => {
   // Connect to ArangoDB
@@ -24,6 +26,7 @@ import { connect } from './data/database';
 
     // Launch GraphQL
     const graphql = express();
+    app.use(cors())
     const authenticate = jwt({
       secret: new Buffer(config.auth.secret, 'base64'),
       audience: config.auth.clientId
@@ -73,6 +76,7 @@ import { connect } from './data/database';
 
     // Launch Relay by creating a normal express server
     const app = express();
+    app.use(cors())
     app.use('/assets/docs', express.static('../../docs/'));
     app.use('/', express.static(path.join(__dirname, '../build')));
     app.use('/graphql', proxy('localhost:8000'));
