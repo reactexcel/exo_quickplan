@@ -458,7 +458,7 @@ export default class City extends Component {
     }
 
     const btnClearItinerary = hasBookedService ?
-      <a disabled href='#!'>Clear city itinerary not</a>
+      <a disabled href='#!'>Clear city itinerary not - Crowdbotics</a>
       : <a onClick={this.clearCityItinerary} href='#!'>Clear city itinerary</a>;
 
     const days = this.props.city.cityDays.map((day, idx) =>
